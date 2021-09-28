@@ -27,7 +27,7 @@ public void removeCard(Card c){
             if(c.getValue()==Value.ACE){
                 hasAnAce = true;
             }
-            value += c.getValue().getValue();
+            value += c.getValue().getNumericalValue();
         }
         values.add(value);
         if (hasAnAce){

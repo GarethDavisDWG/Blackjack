@@ -10,6 +10,7 @@ public class Game {
     private Stack<Card> shuffledDecks;
     public Game(){
               //demo settings
+        players.add(new Player("Aarkan"));
         players.add(new Player());
         players.add(new Dealer());
         shuffledDecks = Shuffle.shuffle(6);

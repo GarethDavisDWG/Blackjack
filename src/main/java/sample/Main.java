@@ -1,4 +1,5 @@
 package sample;
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -12,9 +13,12 @@ public class Main //extends Application
         Game game = new Game();
         game.deal(2);
         System.out.print(game.gameToString());
-        //launch(args);
-        playTurn(game,0,0);
-        game.getPlayers().get(0).splitCards(game.getPlayers().get(0).getHands().get(0),game.dealACard(),game.dealACard());
+        //
+       for(Player p: game.getPlayers()){
+           playTurn(game,game.getPlayers().indexOf(p),0);
+       }
+
+        //game.getPlayers().get(0).splitCards(game.getPlayers().get(0).getHands().get(0),game.dealACard(),game.dealACard());
         System.out.print(game.gameToString());
 
     }
@@ -27,10 +31,17 @@ public class Main //extends Application
         boolean validInput = false;
         do{
             String input = scan.next().toUpperCase();
-            if(input.equals("STICK") || input.equals("TWIST")){
+            if(input.equals("STICK")){
                 validInput = true;
             }
+            else if(input.equals("TWIST")){
+                validInput = true;
+                g.getPlayers().get(player).getHands().get(hand).addCard(g.dealACard());
+            }
         }while(!validInput);
+
+        HashMap<String,Card> handy = new HashMap<>();
+
     }
 
 }

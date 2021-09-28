@@ -23,7 +23,7 @@ public enum Value {
         value = cValue;
     }
 
-    public int getValue() {
+    public int getNumericalValue() {
         return value;
     }
 

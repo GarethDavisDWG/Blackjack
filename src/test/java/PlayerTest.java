@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class PlayerTest {
     @Test
-
     public void testGetName(){
         Player testPlayer = new Player();
         testPlayer.setName("Simon");
