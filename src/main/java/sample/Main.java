@@ -1,6 +1,6 @@
 package sample;
+
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main //extends Application
